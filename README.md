@@ -1,30 +1,20 @@
-# Eizen.ai DevOps Assignment
+# Eizen.ai – DevOps Assignment
 
 This repository contains my solution for the DevOps technical assignment.
 
 ## Completed Tasks
-- Dockerized Flask application
-- Kubernetes deployment using Minikube
-- Service exposure using NodePort
+- Task 2: Docker Compose with Nginx reverse proxy
+- Task 3: Kubernetes deployment using Minikube
 
-## Docker
-Build image:
-docker build -t flask-app:latest .
+## Repository Structure
+- docker/      → Dockerfile, docker-compose, Nginx configuration (Task 2)
+- kubernetes/  → Kubernetes manifests for Minikube deployment (Task 3)
+- bash/        → Bash automation (planned)
+- terraform/   → Terraform configuration (planned)
+- ci/          → CI/CD pipeline (planned)
 
-## Kubernetes (Minikube)
-Start cluster:
-minikube start --driver=docker
+Each folder contains its own README with task-specific details.
 
-Point docker to minikube:
-eval $(minikube docker-env)
-
-Deploy:
-kubectl apply -f kubernetes/deployment.yaml
-kubectl apply -f kubernetes/service.yaml
-
-Access app:
-minikube service flask
-
-## Remaining Tasks
-- Bash automation, Jenkins, Terraform, CI/CD, monitoring are documented as design approach due to time constraints.
+## Notes
+Remaining tasks are documented as design approach due to time constraints.
 
